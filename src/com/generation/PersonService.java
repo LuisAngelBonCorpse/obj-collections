@@ -34,9 +34,9 @@ public class PersonService {
 
     public Person findPersonById( String id )
     {
-        for(Person person : personList){
-            if (person.getId().equals(id)){
-                return person;
+        for(String cadaId : personsById.keySet()){
+            if ( personsById.get(cadaId) == personsById.get(id)) {
+                return personsById.get(id);
             }
         }
         return null;
